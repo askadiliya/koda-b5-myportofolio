@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body{
+  overflow-x: hidden;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color:black;
+  text-decoration: none;
+}
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* --- HERO SECTION (MOBILE) --- */
+.hero {
+ display: flex;
+ justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column-reverse; /* Teks di bawah gambar */
+}
+
+span{
+  color: aqua;
+}
+.hero p{
+  /* background-color: aquamarine; */
+  font-size: large;
+}
+
+.image-content{
+  position: relative;
+  height: 500px;
+  width: 100%;
+}
+
+
+.image-content img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -50px; /* Overflow ke Navbar */
+    right: 0;
+    z-index: 1; 
+    object-fit: cover;
+    -webkit-mask-image: url('./img/yellow-bg.svg');
+    mask-image: url('./img/yellow-bg.svg');
+    -webkit-mask-size: cover;
+    mask-size: cover; 
+
+
+}
+
+.profile-photo{
+  position: absolute;
+  z-index: 5;
+  width: 200px; 
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  top: 100px; 
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid white; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-content{
+  text-align: center;
+  padding: 10px;
+  z-index: 5;
+  margin-top: 250px; 
+}
+
+.hero-content P{
+  font-size: 32px;
+}
+
+h2{
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+
+.btn-hero{
+  margin-top: 20px;
+}
+.link{
+  padding: 5px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.grid-content{ 
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 20px;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.project-info {
+    text-align: center; 
+    padding: 20px;
+}
+
+.project-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.project-info p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.view-projects-link {
+    display: inline-block; 
+    background-color: #007BFF; 
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.view-projects-link:hover {
+    background-color: #0056b3;
+}
+
+.project-image {
+    padding: 20px; 
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    display: block; 
+}
+
+.f-mendsos{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.f-mendsos img{
+  width: 30px;
+  margin: 0 10px;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.footer a{
+    text-decoration: none;
+    padding: 5px;
+}
+.footer img{
+    height: 50px;
+}
+
+@media (min-width: 768px) {
+    
+    .hero {
+        flex-direction: row; 
+        justify-content: space-between; 
+        align-items: flex-start; 
+        padding: 60px 0; 
+        min-height: 85vh;
+    }
+    
+    .image-content {
+        position: relative; 
+        height: 500px; 
+        width: 45%; 
+        overflow: visible; 
+        padding-right: 40px; 
+    }
+    
+    .profile-photo {
+        width: 300px;
+        height: 300px;
+        top: 100px; 
+        left: 50%;
+        transform: translate(-50%, 0); 
+    }
+
+    .hero-content {
+        text-align: left; 
+        max-width: 45%;
+        margin-top: 0; 
+        padding-left: 40px; 
+    }
+    
+    .grid-content {
+        grid-template-columns: 1fr 1fr; 
+        align-items: center; 
+        gap: 40px;
+        padding: 40px; 
+    }
+    
+    .project-info h2 { 
+        text-align: left; 
+    } 
+    
+    .navbar { padding: 15px 40px; }
+    .footer { margin-top: 40px; }
+
+
+    @media (min-width: 1024px) {
+        .hero { max-width: 1200px; margin: 0 auto; padding: 60px 40px; }
+        .hero-content { padding-left: 0; }
+        .image-content { padding-right: 0; }
+        .image-content { height: 600px; } 
+        .profile-photo { width: 400px; height: 400px; top: 150px; } 
+        .grid-content { max-width: 1200px; margin: 0 auto; padding: 60px 80px; }
+    }
+}
