@@ -94,7 +94,6 @@ span{
   text-align: center;
   padding: 10px;
   z-index: 5;
-  margin-top: 250px; 
 }
 
 .hero-content P{
@@ -151,7 +150,7 @@ h2{
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+   
 }
 
 .view-projects-link:hover {
